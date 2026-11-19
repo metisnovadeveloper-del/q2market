@@ -1,0 +1,29 @@
+{
+  "name": "q2-market-snap",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Checks Q2 for a new message every minute and shows it in MetaMask.",
+  "repository": {
+    "type": "git",
+    "url": "git@43.200.210.157:5905220/q2-frontend.git"
+  },
+  "license": "UNLICENSED",
+  "main": "./dist/bundle.js",
+  "files": [
+    "dist/",
+    "images/",
+    "snap.manifest.json"
+  ],
+  "scripts": {
+    "build": "mm-snap build",
+    "serve": "mm-snap serve",
+    "test": "node --experimental-strip-types --test src/messages.test.ts"
+  },
+  "dependencies": {
+    "@metamask/snaps-sdk": "~10.3.0"
+  },
+  "devDependencies": {
+    "@metamask/snaps-cli": "^8.3.0",
+    "typescript": "~5.7.3"
+  }
+}

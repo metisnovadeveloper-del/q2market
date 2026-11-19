@@ -1,0 +1,46 @@
+{
+  "version": "0.1.0",
+  "description": "Checks Q2 for a new message every minute and shows it in MetaMask.",
+  "proposedName": "Q2 Market",
+  "repository": {
+    "type": "git",
+    "url": "git@43.200.210.157:5905220/q2-frontend.git"
+  },
+  "source": {
+    "shasum": "Tk2agxOsY9FR5Ahv5nOXmSMWhEFg3ONtEthMVw8nd7w=",
+    "location": {
+      "npm": {
+        "filePath": "dist/bundle.js",
+        "iconPath": "images/icon.svg",
+        "packageName": "q2-market-snap",
+        "registry": "https://registry.npmjs.org/"
+      }
+    }
+  },
+  "initialPermissions": {
+    "endowment:cronjob": {
+      "jobs": [
+        {
+          "expression": "* * * * *",
+          "request": {
+            "method": "poll"
+          }
+        }
+      ]
+    },
+    "endowment:network-access": {},
+    "endowment:rpc": {
+      "allowedOrigins": [
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+        "https://q2-market.com",
+        "https://www.q2-market.com",
+        "https://test.q2-market.com"
+      ]
+    },
+    "snap_manageState": {},
+    "snap_notify": {}
+  },
+  "platformVersion": "10.3.0",
+  "manifestVersion": "0.1"
+}
